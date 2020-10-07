@@ -10,3 +10,4 @@ Grain breakage is an important factor that affects rice yield and quality. It is
 2. Using the decision tree, the Gini coefficient is selected as the segmentation metric of the decision tree node split, supplemented by the method of random forest for comparison, and finally the identification model of broken rice kernels is established.
 
 ## Result:
+<img src="./result/decision tree.png" height=300px></img>
