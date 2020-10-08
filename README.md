@@ -10,8 +10,8 @@ Grain breakage is an important factor that affects grain yield and quality. It i
 
 * Image pre-processing (singleimg.py). We first pre-process the raw image using the OpenCV library including grayscale, image enhancement, image segmentation, image denoising, and edge detection. 
 
-<figure><img src="./result/decision tree.png" height=100px></img><figcaption>Original Grain</figcaption></figure>
-<figure><img src="./result/decision tree.png" height=100px></img><figcaption>Pre-processed Grain</figcaption></figure>
+<figure><img src="./result/Y003 copy.bmp" height=300px></img><figcaption>Original Grain</figcaption></figure>
+<figure><img src="./result/Picture1.png" height=300px></img><figcaption>Pre-processed Grain</figcaption></figure>
 
 
 * Feature Extraction that extracts morphological features such as rice grain sample area, perimeter, roundness, long axis, short axis, aspect ratio, rectangularity, density, etc. 
@@ -25,4 +25,18 @@ Considering the training data
 We collect xxx. Talk about annotation(#labled). Specifications: random forest (#trees, #depth). Decision Tree
 
 ## Result and Analysis:
-<img src="./result/decision tree.png" height=300px></img>
+
+### Classification Result Using Single Feature
+|             |train accuracy|test accuracy|  test F1    | test recall |test precision|
+| :----------- | :------------ |:------------ |:------------ |:------------ |:------------ |
+| Area      | 88.01 |	84.90|	69.40|	76.12|	68.85       |
+| Perimeter   | 88.24	|85.79|78.46|	76.90	|84.37|
+| Roundness   |82.16|	83.00	|45.31|	41.51|	49.98|
+| Length      |85.10|	81.19	|71.74	|69.99|	80.41|
+| Width       |84.25|	80.95|	56.13	|62.15	|56.76|
+| Length-width Ratio|82.18|	83.05	|45.32|	41.54|49.97|
+| Rectangularity|82.18|	83.05|	45.32|	41.54|	49.97|
+| Dendity   |82.18|	83.05|	45.32|	41.54|	49.97|
+
+### Broken Grain Detect Decision Tree
+<img src="./result/decision tree.png" height=500px></img>
