@@ -16,7 +16,7 @@ Grain breakage is an important factor that affects grain yield and quality. It i
 <img src="./result/Picture1.png" height=300px></img>
 
 
-* Feature Extraction that extracts morphological features such as rice grain sample area, perimeter, roundness, long axis, short axis, aspect ratio, rectangularity, density, etc. 
+* Feature Extraction that extracts morphological features such as rice grain sample area, perimeter, roundness, length, width, length-width ratio, rectangularity, density, etc. 
 
 ### Broken-graph detection (classification) module
 Considering the training data
@@ -24,7 +24,7 @@ Considering the training data
 
 ## Data
 
-We collect xxx. Talk about annotation(#labled). Specifications: random forest (#trees, #depth). Decision Tree
+We collected 177 complete grain samples and 39 broken grain samples. 
 
 ## Result and Analysis:
 
