@@ -10,8 +10,10 @@ Grain breakage is an important factor that affects grain yield and quality. It i
 
 * Image pre-processing (singleimg.py). We first pre-process the raw image using the OpenCV library including grayscale, image enhancement, image segmentation, image denoising, and edge detection. 
 
-<figure><img src="./result/Y003 copy.bmp" height=300px></img><figcaption>Original Grain</figcaption></figure>
-<figure><img src="./result/Picture1.png" height=300px></img><figcaption>Pre-processed Grain</figcaption></figure>
+### Original Grain
+<img src="./result/Y003 copy.bmp" height=300px></img>
+### Pre-processed Grain
+<img src="./result/Picture1.png" height=300px></img>
 
 
 * Feature Extraction that extracts morphological features such as rice grain sample area, perimeter, roundness, long axis, short axis, aspect ratio, rectangularity, density, etc. 
