@@ -19,7 +19,7 @@ def imagecrop(close_result,box):
     return cropimage
 
 # find the appropriate contour
-# TODO@branzhu@yitianjiang, consider wether the largest contour is out of the image
+
 def findProperCounter(contours, img = None):
     max_ = 0
     max_contour = None
@@ -55,7 +55,7 @@ for directory in directories:
             #print(os.path.join(directory, filename))
             #for cont in contours:
             #cv.drawContours(thresh, contours =contours, contourIdx=1, color=128, thickness=-1)
-            kernel = np.ones((5,5), np.uint8)#设置开闭运算卷积核
+            kernel = np.ones((5,5), np.uint8)
             open_result = cv.morphologyEx(thresh, cv.MORPH_CLOSE, kernel)
             close_result = cv.morphologyEx(open_result, cv.MORPH_CLOSE, kernel)
             contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
@@ -75,13 +75,13 @@ for directory in directories:
                         max_counter = perimeter
                         max_id = idx
             #embed()
-            #x, y, w, h = cv.boundingRect(contour) # 找到边界坐标
+            #x, y, w, h = cv.boundingRect(contour) 
             #print(x, y, w, h)
-            # cv.rectangle(close_result, (x, y), (x+w, y+h), (0, 255, 0), 2)# 计算点集最外面的矩形边界
-            rect = cv.minAreaRect(contour)# 找面积最小的矩形
-            box = cv.boxPoints(rect) # 得到最小矩形的坐标
-            box = np.int0(box)# 标准化坐标到整数
-            # cv.drawContours(close_result, [box], 0, (0, 0, 255), 3) # 画出边界
+            # cv.rectangle(close_result, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            rect = cv.minAreaRect(contour)
+            box = cv.boxPoints(rect) 
+            box = np.int0(box)
+            # cv.drawContours(close_result, [box], 0, (0, 0, 255), 3) 
 
             width = int(rect[1][0])
             height = int(rect[1][1])
